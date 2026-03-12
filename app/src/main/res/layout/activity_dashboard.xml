@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dfs_bg">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dfs_header"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⬡  DIGITAL FILES SYSTEM"
+            android:textColor="@color/dfs_text"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"/>
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menú"
+            android:src="@android:drawable/ic_menu_more"
+            app:tint="@color/dfs_text"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <!-- BODY: sidebar + contenido -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- SIDEBAR -->
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@color/dfs_sidebar"
+            android:orientation="vertical"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="12dp">
+
+            <!-- Inicio (activo) -->
+            <ImageButton
+                android:id="@+id/sibHome"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/bg_sidebar_active"
+                android:contentDescription="Inicio"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="@color/dfs_accent"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Usuarios -->
+            <ImageButton
+                android:id="@+id/sibUsuarios"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="6dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Usuarios"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="@color/dfs_muted"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Entrada -->
+            <ImageButton
+                android:id="@+id/sibEntrada"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="6dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Registrar entrada"
+                android:src="@android:drawable/ic_menu_recent_history"
+                app:tint="@color/dfs_muted"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Salida -->
+            <ImageButton
+                android:id="@+id/sibSalida"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="6dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Registrar salida"
+                android:src="@android:drawable/ic_menu_recent_history"
+                app:tint="@color/dfs_muted"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Cerrar sesión -->
+            <ImageButton
+                android:id="@+id/sibLogout"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Cerrar sesión"
+                android:src="@android:drawable/ic_lock_power_off"
+                app:tint="@color/dfs_muted"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Saludo -->
+                <TextView
+                    android:id="@+id/tvBienvenido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenido, —!"
+                    android:textColor="@color/dfs_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvRol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rol: —"
+                    android:textColor="@color/dfs_muted"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Card Menú Principal -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardMenuPrincipal"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Menú Principal"
+                    android:textColor="@color/dfs_text"
+                    android:textSize="15sp"
+                    android:gravity="start|center_vertical"
+                    android:drawableStart="@android:drawable/ic_menu_agenda"
+                    android:drawableTint="@color/dfs_accent"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Card Usuarios -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardUsuarios"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Usuarios"
+                    android:textColor="@color/dfs_text"
+                    android:textSize="15sp"
+                    android:gravity="start|center_vertical"
+                    android:drawableStart="@android:drawable/ic_menu_manage"
+                    android:drawableTint="@color/dfs_accent"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Card Horarios -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardHorarios"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Horarios"
+                    android:textColor="@color/dfs_text"
+                    android:textSize="15sp"
+                    android:gravity="start|center_vertical"
+                    android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                    android:drawableTint="@color/dfs_accent"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Card Noticias -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardNoticias"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Noticias"
+                    android:textColor="@color/dfs_text"
+                    android:textSize="15sp"
+                    android:gravity="start|center_vertical"
+                    android:drawableStart="@android:drawable/ic_menu_info_details"
+                    android:drawableTint="@color/dfs_accent"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Cerrar Sesión -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogout"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="  Cerrar Sesión"
+                    android:textColor="@color/dfs_muted"
+                    android:drawableStart="@android:drawable/ic_lock_power_off"
+                    android:drawableTint="@color/dfs_muted"
+                    app:backgroundTint="@color/dfs_logout"
+                    app:strokeColor="@color/dfs_border"
+                    app:cornerRadius="8dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- FOOTER -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2024 Digital Files System"
+        android:textColor="@color/dfs_muted"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:padding="12dp"/>
+
+</LinearLayout>

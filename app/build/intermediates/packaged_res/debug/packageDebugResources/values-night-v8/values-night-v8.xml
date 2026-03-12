@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.Appdeasistencia" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#1A6EF7</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:colorBackground">#0B1629</item>
+        <item name="colorSurface">#0F1E30</item>
+        <item name="colorOnSurface">#E2EAF5</item>
+        <item name="colorOutline">#1A2E45</item>
+    </style>
+    <style name="Theme.Appdeasistencia" parent="Base.Theme.Appdeasistencia"/>
+</resources>

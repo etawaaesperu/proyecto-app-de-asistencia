@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta Digital Files System -->
+    <color name="dfs_bg">#0B1629</color>
+    <color name="dfs_surface">#0F1E30</color>
+    <color name="dfs_surface2">#162338</color>
+    <color name="dfs_header">#081020</color>
+    <color name="dfs_sidebar">#0A1828</color>
+    <color name="dfs_accent">#1A6EF7</color>
+    <color name="dfs_accent_light">#4D9FFF</color>
+    <color name="dfs_text">#E2EAF5</color>
+    <color name="dfs_muted">#7A94B0</color>
+    <color name="dfs_border">#1A2E45</color>
+    <color name="dfs_logout">#1A2A3A</color>
+</resources>
