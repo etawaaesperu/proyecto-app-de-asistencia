@@ -118,12 +118,11 @@ Tres correcciones críticas:
 ```kotlin
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)   // ← AGREGADO
 }
 
 android {
     namespace = "com.proyecto.app_de_asistencia"
-    compileSdk = 36   // ← CORREGIDO (era: compileSdk { version = release(36) })
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.proyecto.app_de_asistencia"
@@ -147,9 +146,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"   // ← AGREGADO
-    }
+
 }
 
 dependencies {
@@ -158,7 +155,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    // ← ELIMINADA la línea duplicada: "com.google.android.material:material:1.11.0"
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
