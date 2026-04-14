@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dfs_bg"
+    android:gravity="center">
+
+    <!-- Animación Lottie principal -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimation"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:lottie_fileName="splash.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- Título principal -->
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIGITAL FILES SYSTEM"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/dfs_text"
+        android:layout_marginTop="20dp"
+        android:letterSpacing="0.12"
+        android:gravity="center" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Asistencia"
+        android:textSize="13sp"
+        android:textColor="@color/dfs_muted"
+        android:layout_marginTop="6dp"
+        android:gravity="center" />
+
+    <!-- Espaciador flexible -->
+
+    <!-- Copyright al pie -->
+    <TextView
+        android:id="@+id/tvCopyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2024 Digital Files System"
+        android:textSize="11sp"
+        android:textColor="@color/dfs_muted"
+        android:layout_marginBottom="24dp"
+        android:gravity="center" />
+
+</LinearLayout>

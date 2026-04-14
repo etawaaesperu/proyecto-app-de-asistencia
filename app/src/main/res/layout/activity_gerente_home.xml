@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dfs_bg">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/dfs_header"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⬡  DIGITAL FILES SYSTEM"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/dfs_text"
+            android:letterSpacing="0.1" />
+        <ImageButton
+            android:id="@+id/btnMenuHeader"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_more"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/dfs_muted" />
+    </LinearLayout>
+
+    <!-- Cuerpo: sidebar + contenido -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Sidebar izquierdo -->
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@color/dfs_sidebar"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageButton
+                android:id="@+id/sibInicio"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_compass"
+                app:tint="@color/dfs_accent"
+                android:background="@drawable/bg_sidebar_active"
+                android:layout_marginBottom="4dp" />
+
+            <ImageButton
+                android:id="@+id/sibAsistencia"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                app:tint="@color/dfs_muted"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginBottom="4dp" />
+
+            <ImageButton
+                android:id="@+id/sibEmpleados"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="@color/dfs_muted"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginBottom="4dp" />
+
+            <ImageButton
+                android:id="@+id/sibUsuarios"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_agenda"
+                app:tint="@color/dfs_muted"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginBottom="4dp" />
+
+            <ImageButton
+                android:id="@+id/sibHorarios"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                app:tint="@color/dfs_muted"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Espaciador -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/sibLogout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_lock_power_off"
+                app:tint="@color/dfs_muted"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <!-- Contenido principal -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvBienvenido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenido!"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dfs_text" />
+
+                <TextView
+                    android:id="@+id/tvRol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rol: Gerente"
+                    android:textSize="13sp"
+                    android:textColor="@color/dfs_muted"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
+                    android:id="@+id/tvFechaHora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--:-- --/--/----"
+                    android:textSize="13sp"
+                    android:textColor="@color/dfs_accent_light"
+                    android:layout_marginTop="6dp" />
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dfs_border"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvEstadoAsistencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado: Sin marcar"
+                    android:textSize="13sp"
+                    android:textColor="@color/dfs_muted"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMarcarAsistencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Marcar Mi Asistencia"
+                    android:textColor="@color/dfs_text"
+                    app:backgroundTint="@color/dfs_accent"
+                    app:cornerRadius="8dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dfs_border"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Cards de navegación -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardAsistencia"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Asistencia"
+                    android:textColor="@color/dfs_text"
+                    android:gravity="start|center_vertical"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:drawableStart="@android:drawable/ic_menu_recent_history"
+                    app:iconTint="@color/dfs_accent"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardEmpleados"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Empleados"
+                    android:textColor="@color/dfs_text"
+                    android:gravity="start|center_vertical"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:drawableStart="@android:drawable/ic_menu_manage"
+                    app:iconTint="@color/dfs_accent"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardUsuarios"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Usuarios"
+                    android:textColor="@color/dfs_text"
+                    android:gravity="start|center_vertical"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:drawableStart="@android:drawable/ic_menu_agenda"
+                    app:iconTint="@color/dfs_accent"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardHorarios"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="  Horarios"
+                    android:textColor="@color/dfs_text"
+                    android:gravity="start|center_vertical"
+                    app:backgroundTint="@color/dfs_surface2"
+                    app:cornerRadius="10dp"
+                    android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                    app:iconTint="@color/dfs_accent"
+                    android:layout_marginBottom="16dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogout"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Cerrar Sesión"
+                    android:textColor="@color/dfs_text"
+                    app:backgroundTint="@color/dfs_logout"
+                    app:strokeColor="@color/dfs_border"
+                    app:cornerRadius="8dp"
+                    android:drawableStart="@android:drawable/ic_lock_power_off"
+                    app:iconTint="@color/dfs_muted"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Footer -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2024 Digital Files System"
+        android:textColor="@color/dfs_muted"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp"
+        android:background="@color/dfs_bg" />
+
+</LinearLayout>

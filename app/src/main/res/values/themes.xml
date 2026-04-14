@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AppDeAsistencia" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/dfs_accent</item>
+        <item name="colorPrimaryVariant">@color/dfs_surface</item>
+        <item name="colorOnPrimary">@color/dfs_text</item>
+        <item name="colorSecondary">@color/dfs_accent_light</item>
+        <item name="colorOnSecondary">@color/dfs_text</item>
+        <item name="android:colorBackground">@color/dfs_bg</item>
+        <item name="colorSurface">@color/dfs_surface</item>
+        <item name="colorOnSurface">@color/dfs_text</item>
+        <item name="android:windowBackground">@color/dfs_bg</item>
+        <item name="android:statusBarColor">@color/dfs_header</item>
+        <item name="android:navigationBarColor">@color/dfs_bg</item>
+        <item name="colorError">@color/dfs_error</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.AppDeAsistencia.Body</item>
+        <!-- Diálogos con estilo oscuro del sistema -->
+        <item name="materialAlertDialogTheme">@style/DfsDialog</item>
+        <item name="alertDialogTheme">@style/DfsDialogLegacy</item>
+        <item name="android:datePickerDialogTheme">@style/DfsDialogLegacy</item>
+        <item name="android:timePickerDialogTheme">@style/DfsDialogLegacy</item>
+    </style>
+
+    <style name="TextAppearance.AppDeAsistencia.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/dfs_text</item>
+    </style>
+
+    <!-- Tema base para MaterialAlertDialogBuilder -->
+    <style name="DfsDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/dfs_surface</item>
+        <item name="colorOnSurface">@color/dfs_text</item>
+        <item name="colorPrimary">@color/dfs_accent</item>
+        <item name="colorOnPrimary">@color/dfs_text</item>
+        <item name="android:textColorPrimary">@color/dfs_text</item>
+        <item name="android:textColorSecondary">@color/dfs_muted</item>
+        <item name="android:background">@color/dfs_surface</item>
+    </style>
+
+    <!-- Tema para AlertDialog.Builder clásico y DatePicker/TimePicker -->
+    <style name="DfsDialogLegacy" parent="Theme.Material3.Dark.Dialog">
+        <item name="android:background">@color/dfs_surface</item>
+        <item name="android:textColor">@color/dfs_text</item>
+        <item name="colorPrimary">@color/dfs_accent</item>
+        <item name="colorOnSurface">@color/dfs_text</item>
+        <item name="colorSurface">@color/dfs_surface</item>
+        <item name="android:textColorPrimary">@color/dfs_text</item>
+        <item name="android:textColorSecondary">@color/dfs_muted</item>
+    </style>
+</resources>

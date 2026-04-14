@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- El tema DFS es siempre oscuro, no cambia en modo noche -->
+    <style name="Theme.AppDeAsistencia" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/dfs_accent</item>
+        <item name="colorPrimaryVariant">@color/dfs_surface</item>
+        <item name="colorOnPrimary">@color/dfs_text</item>
+        <item name="colorSecondary">@color/dfs_accent_light</item>
+        <item name="colorOnSecondary">@color/dfs_text</item>
+        <item name="android:colorBackground">@color/dfs_bg</item>
+        <item name="colorSurface">@color/dfs_surface</item>
+        <item name="colorOnSurface">@color/dfs_text</item>
+        <item name="android:windowBackground">@color/dfs_bg</item>
+        <item name="android:statusBarColor">@color/dfs_header</item>
+        <item name="android:navigationBarColor">@color/dfs_bg</item>
+        <item name="colorError">@color/dfs_error</item>
+    </style>
+</resources>
